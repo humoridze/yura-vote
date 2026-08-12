@@ -1,60 +1,508 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yura-vote</title>
-  <meta name="robots" content="noindex">
-  <style>
-    :root {
-      --ink: #10131a;
-      --ink-soft: #5b6472;
-      --signal: #e84e1b;
-      --paper: #f3f5f8;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100svh;
-      display: grid;
-      place-content: center;
-      padding: 2rem;
-      font-family: system-ui, sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(700px 360px at 80% 0%, rgba(232, 78, 27, 0.12), transparent 55%),
-        linear-gradient(180deg, #f7f8fb, var(--paper));
-    }
-    main { max-width: 28rem; text-align: center; }
-    .brand {
-      margin: 0 0 0.75rem;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      color: var(--signal);
-    }
-    h1 {
-      margin: 0 0 0.75rem;
-      font-size: clamp(1.8rem, 5vw, 2.4rem);
-      letter-spacing: -0.04em;
-      line-height: 1.1;
-    }
-    p {
-      margin: 0 0 1.5rem;
-      color: var(--ink-soft);
-      line-height: 1.5;
-    }
-    a {
-      color: var(--ink);
-      font-weight: 600;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ВСЕ МЫ ЗНАЕМ — ЮРА!!! | Визитка кандидата • yurist03 (Yuralag) • 2026</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23c94dff'/><rect y='11' width='16' height='5' fill='%23160a2a'/><rect x='6' y='3' width='4' height='4' fill='%23ffd21f'/></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/rubik@5/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/rubik@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/rubik@5/900.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/rubik@5/900-italic.css">
+<style>
+:root{
+  --bg:#160a2a; --bg2:#1d0f38; --panel:#241243;
+  --ink:#fff6e6; --muted:#bcaede;
+  --neon:#c94dff; --neon-l:#e58cff;
+  --yellow:#ffd21f; --yellow-l:#ffe98a; --yellow-d:#c79a00;
+  --red:#e8332b; --green:#5ad04a; --green-d:#2e8a24;
+  --px:'Press Start 2P',monospace; --body:'Rubik',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.6; overflow-x:hidden;
+  background-image:
+    radial-gradient(rgba(255,255,255,.13) 1px, transparent 1.7px),
+    radial-gradient(rgba(255,255,255,.08) 1px, transparent 1.7px),
+    linear-gradient(rgba(201,77,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,77,255,.055) 1px, transparent 1px);
+  background-size:210px 180px, 140px 120px, 24px 24px, 24px 24px;
+  background-position:12px 24px, 70px 90px, 0 0, 0 0;
+}
+::selection{background:var(--neon); color:#160a2a}
+a{color:inherit}
+section[id]{scroll-margin-top:90px}
+.wrap{max-width:1060px; margin:0 auto; padding:0 22px}
+.noise{position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.05; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
+#particles{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
+#particles i{position:absolute; bottom:-24px; display:block; animation:floatUp linear infinite}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(360deg)}}
+main,header.nav,.ticker-wrap,footer{position:relative; z-index:1}
+.pxic{display:inline-block; vertical-align:middle; image-rendering:pixelated; filter:drop-shadow(2px 2px 0 rgba(0,0,0,.55))}
+
+/* ---------- type ---------- */
+.ph{font-family:var(--body); font-weight:900; font-style:italic; text-transform:uppercase; color:var(--yellow); line-height:1.12; letter-spacing:.5px;
+  text-shadow:3px 0 0 #000,-3px 0 0 #000,0 3px 0 #000,0 -3px 0 #000,3px 3px 0 #000,-3px 3px 0 #000,3px -3px 0 #000,-3px -3px 0 #000,6px 6px 0 rgba(0,0,0,.55);}
+.kicker{font-family:var(--px); font-size:9px; color:var(--neon-l); letter-spacing:2px; text-transform:uppercase; display:flex; align-items:center; gap:10px}
+.kicker::before{content:""; width:12px; height:12px; background:var(--neon); box-shadow:inset -3px -3px 0 #7a1fd0, inset 3px 3px 0 var(--neon-l), 0 0 10px var(--neon)}
+.h2{font-family:var(--px); font-size:clamp(15px,2.6vw,23px); line-height:1.6; margin:14px 0 8px; color:#fff; text-shadow:3px 3px 0 #000}
+.sub{color:var(--muted); max-width:640px}
+.ribbon{display:inline-block; transform:skew(-10deg); background:var(--red); border:3px solid #000; box-shadow:4px 4px 0 #000; padding:8px 16px}
+.ribbon>span{display:inline-block; transform:skew(10deg); font-family:var(--body); font-weight:900; font-style:italic; text-transform:uppercase; color:#fff; font-size:clamp(12px,1.6vw,16px); letter-spacing:1px}
+.neon-frame{border:3px solid #000; box-shadow:0 0 0 3px var(--neon), 0 14px 0 rgba(0,0,0,.5), 0 0 30px rgba(201,77,255,.35); background:var(--panel)}
+.mc-btn{display:inline-flex; align-items:center; gap:10px; padding:14px 22px; font-family:var(--px); font-size:10px; letter-spacing:.5px; text-transform:uppercase; text-decoration:none; text-align:center; cursor:pointer;
+  color:#241703; background:var(--yellow); border:3px solid #000; box-shadow:inset 0 4px 0 var(--yellow-l), inset 0 -5px 0 var(--yellow-d), 0 6px 0 #000; transition:transform .06s, box-shadow .06s, filter .15s}
+.mc-btn:hover{filter:brightness(1.08)}
+.mc-btn:active{transform:translateY(5px); box-shadow:inset 0 4px 0 var(--yellow-l), inset 0 -5px 0 var(--yellow-d), 0 1px 0 #000}
+.mc-btn.purple{background:#8a2be2; color:#fff; box-shadow:inset 0 4px 0 #c78bff, inset 0 -5px 0 #5a14a0, 0 6px 0 #000}
+.mc-btn.purple:active{box-shadow:inset 0 4px 0 #c78bff, inset 0 -5px 0 #5a14a0, 0 1px 0 #000}
+.mc-btn .pxic{filter:none}
+
+/* ---------- ticker ---------- */
+.ticker-wrap{background:#7a1fd0; border-bottom:3px solid #000; overflow:hidden}
+.ticker{display:flex; width:max-content; animation:tick 30s linear infinite}
+.ticker span{font-family:var(--px); font-size:9px; color:#fff; padding:10px 0; white-space:nowrap; letter-spacing:1px; text-shadow:2px 2px 0 #000}
+.ticker b{color:var(--yellow)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky; top:0; z-index:50; background:rgba(22,10,42,.94); backdrop-filter:blur(6px); border-bottom:3px solid #000; box-shadow:0 3px 0 rgba(201,77,255,.4)}
+.nav-in{display:flex; align-items:center; gap:18px; padding:12px 0}
+.logo{font-family:var(--px); font-size:14px; text-decoration:none; display:flex; align-items:center; gap:10px; color:#fff}
+.logo .cube{width:20px; height:20px; background:var(--neon); box-shadow:inset -5px -5px 0 #7a1fd0, inset 5px 5px 0 var(--neon-l), 0 0 12px var(--neon)}
+.logo b{color:var(--yellow)}
+.cmd-chip{margin-left:auto; display:inline-flex; align-items:center; gap:8px; font-family:var(--px); font-size:9px; color:var(--neon-l); border:2px solid var(--neon); background:rgba(201,77,255,.1); padding:8px 10px; letter-spacing:1px}
+@media(max-width:640px){.cmd-chip{display:none}}
+
+/* ---------- biz card ---------- */
+.card-sec{padding:64px 0 30px}
+.biz-card{display:grid; grid-template-columns:330px 1fr; overflow:hidden}
+.bc-left{background:#0d0620; border-right:3px solid #000; padding:34px 22px 26px; text-align:center; position:relative}
+.bc-left::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 38%, rgba(201,77,255,.28), transparent 62%)}
+.skin-box{position:relative; display:inline-block; animation:bob 5s ease-in-out infinite}
+.skin-box .pxic{width:172px; height:344px; filter:drop-shadow(6px 8px 0 rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(201,77,255,.45))}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.pedestal{width:150px; height:26px; margin:6px auto 0; background:linear-gradient(#c94dff 0 8px, #7a1fd0 8px 18px, #4b1180 18px); border:3px solid #000; box-shadow:0 6px 0 rgba(0,0,0,.5), 0 0 18px rgba(201,77,255,.5)}
+.nameplate{position:relative; font-family:var(--px); margin-top:20px; background:#160a2a; border:3px solid #000; box-shadow:0 0 0 3px rgba(201,77,255,.5); padding:14px 10px}
+.nameplate b{font-size:12px; color:var(--neon-l); display:block; margin-bottom:8px; text-shadow:0 0 10px var(--neon)}
+.nameplate small{font-size:8px; color:var(--muted); letter-spacing:1px; line-height:1.9; display:block}
+.bc-right{padding:38px 40px 34px}
+h1.title{font-size:clamp(26px,4.4vw,46px); margin:16px 0 14px}
+h1 .big{display:block; font-size:clamp(32px,5.6vw,60px); color:#fff}
+.quote{color:var(--muted); max-width:560px; margin:16px 0 20px; font-size:16px}
+.quote em{color:var(--ink); font-style:normal; font-weight:700}
+.za{list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:600px; margin-bottom:26px}
+.za li{display:flex; gap:12px; align-items:center; padding:12px 14px; background:rgba(0,0,0,.35); border:2px solid rgba(201,77,255,.4); transition:transform .2s, box-shadow .2s}
+.za li:hover{transform:translateY(-3px); box-shadow:0 0 14px rgba(201,77,255,.35)}
+.za .ic{flex:0 0 34px; height:34px; display:grid; place-items:center; background:#2a1245; border:2px solid #000; box-shadow:inset 0 3px 0 rgba(255,255,255,.12)}
+.za .ic .pxic{width:22px; height:22px}
+.za b{font-weight:900; font-style:italic; text-transform:uppercase; color:#fff; font-size:13px; letter-spacing:.4px; display:block}
+.za small{color:var(--yellow); font-weight:700; font-size:12px}
+.hero-btns{display:flex; gap:16px; flex-wrap:wrap}
+@media(max-width:900px){.biz-card{grid-template-columns:1fr}.bc-left{border-right:none; border-bottom:3px solid #000}.za{grid-template-columns:1fr}}
+
+/* ---------- plans ---------- */
+.plans{padding:70px 0 60px}
+.plan-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-top:40px}
+.plan{padding:22px 16px; background:var(--panel); border:3px solid #000; box-shadow:0 0 0 3px rgba(201,77,255,.35), 6px 8px 0 rgba(0,0,0,.45); transition:transform .22s, box-shadow .22s; position:relative}
+.plan:hover{transform:translateY(-6px); box-shadow:0 0 0 3px var(--neon), 0 0 24px rgba(201,77,255,.45), 6px 8px 0 rgba(0,0,0,.45)}
+.plan .ic{width:46px; height:46px; display:grid; place-items:center; background:#2a1245; border:3px solid #000; box-shadow:inset 0 4px 0 rgba(255,255,255,.12); margin-bottom:16px}
+.plan .ic .pxic{width:28px; height:28px}
+.plan h3{font-family:var(--body); font-weight:900; font-style:italic; text-transform:uppercase; font-size:14px; line-height:1.35; color:#fff; text-shadow:2px 2px 0 #000; margin-bottom:8px}
+.plan p{color:var(--muted); font-size:13px}
+.plan .n{position:absolute; top:10px; right:12px; font-family:var(--px); font-size:14px; color:var(--neon); opacity:.6}
+@media(max-width:960px){.plan-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.plan-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.plan-grid{grid-template-columns:1fr}}
+
+/* ---------- about / exp ---------- */
+.about{padding:60px 0; background:var(--bg2); border-top:3px solid #000; box-shadow:inset 0 3px 0 rgba(201,77,255,.4)}
+.exp-list{margin-top:36px; display:grid; gap:14px; max-width:840px}
+.exp{display:flex; gap:18px; align-items:center; padding:18px 20px; background:var(--panel); border:3px solid #000; box-shadow:0 0 0 3px rgba(201,77,255,.3), 6px 7px 0 rgba(0,0,0,.4)}
+.exp .ic{flex:0 0 52px; height:52px; display:grid; place-items:center; background:#2a1245; border:3px solid #000; box-shadow:inset 0 4px 0 rgba(255,255,255,.12)}
+.exp .ic .pxic{width:32px; height:32px}
+.exp h3{font-family:var(--px); font-size:10px; line-height:1.7; color:#fff; text-shadow:2px 2px 0 #000; margin-bottom:6px}
+.exp p{color:var(--muted); font-size:14px}
+.exp p b{color:var(--yellow)}
+.exp .yrs{margin-left:auto; flex:0 0 auto; font-family:var(--px); font-size:8px; color:#241703; background:var(--yellow); border:2px solid #000; padding:6px 8px; box-shadow:inset 0 3px 0 var(--yellow-l), 3px 3px 0 #000}
+@media(max-width:700px){.exp{flex-wrap:wrap}.exp .yrs{margin-left:70px}}
+
+/* ---------- event ---------- */
+.event{padding:70px 0}
+.cd{display:flex; gap:14px; margin:34px 0 18px; flex-wrap:wrap}
+.cd-box{min-width:104px; text-align:center; padding:20px 10px; background:#0d0620; border:3px solid #000; box-shadow:0 0 0 3px rgba(201,77,255,.45)}
+.cd-box b{font-family:var(--px); font-size:clamp(18px,3vw,30px); color:var(--yellow); display:block; text-shadow:0 0 14px rgba(255,210,31,.55), 2px 2px 0 #000}
+.cd-box span{font-family:var(--px); font-size:8px; color:var(--muted); letter-spacing:1px}
+.cd-label{display:inline-flex; align-items:center; gap:10px; font-family:var(--px); font-size:10px; color:var(--yellow); letter-spacing:1px; text-shadow:2px 2px 0 #000}
+.cd-label .pxic{width:18px; height:18px}
+
+/* ---------- vote ---------- */
+.vote{padding:60px 0 80px; background:var(--bg2); border-top:3px solid #000}
+.poll{margin-top:34px; max-width:760px}
+.poll-row{display:flex; justify-content:space-between; font-family:var(--px); font-size:10px; margin-bottom:10px}
+.poll-row .y{color:var(--neon-l)} .poll-row .b{color:#ff8d84}
+.poll-bar{height:32px; background:#0d0620; border:3px solid #000; display:flex; overflow:hidden; box-shadow:inset 0 4px 0 rgba(0,0,0,.6)}
+.poll-fill{height:100%; transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.poll-fill.y{background:repeating-linear-gradient(90deg, var(--neon-l) 0 10px, var(--neon) 10px 20px); box-shadow:0 0 18px rgba(201,77,255,.7)}
+.poll-fill.b{background:repeating-linear-gradient(90deg, #b0453a 0 10px, #8a2b1e 10px 20px)}
+.vote-row{display:flex; align-items:center; gap:22px; margin-top:30px; flex-wrap:wrap}
+.total{font-family:var(--px); font-size:9px; color:var(--yellow); text-shadow:2px 2px 0 #000}
+.vote-note{font-family:var(--px); font-size:8px; color:var(--muted); letter-spacing:1px; line-height:2}
+
+/* ---------- footer ---------- */
+footer{background:#0b0518; border-top:3px solid #000; box-shadow:0 -3px 0 rgba(201,77,255,.4); padding:40px 0 26px}
+.foot{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center}
+.foot .who{display:flex; align-items:center; gap:12px; font-family:var(--px); font-size:10px; color:var(--muted); line-height:2}
+.foot .who .pxic{width:18px; height:18px}
+.foot .who b{color:var(--neon-l)}
+.foot-bottom{margin-top:22px; border-top:2px solid rgba(201,77,255,.3); padding-top:18px; font-family:var(--px); font-size:8px; color:var(--muted); letter-spacing:1px; line-height:2; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+
+/* ---------- fx ---------- */
+.plus1{position:fixed; z-index:99; font-family:var(--px); font-size:14px; color:var(--yellow); pointer-events:none; animation:rise .8s ease-out forwards; text-shadow:2px 2px 0 #000}
+@keyframes rise{to{transform:translateY(-70px); opacity:0}}
+.bit{position:fixed; z-index:99; width:9px; height:9px; pointer-events:none; animation:burst .85s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--dx),var(--dy)) rotate(560deg); opacity:0}}
+.toast{position:fixed; left:50%; bottom:30px; transform:translate(-50%,160%); z-index:100; background:var(--yellow); color:#241703; font-family:var(--px); font-size:10px; line-height:1.8; padding:16px 20px; border:3px solid #000; box-shadow:0 0 0 3px var(--neon), 0 8px 0 rgba(0,0,0,.5); transition:transform .4s cubic-bezier(.2,.8,.2,1); max-width:min(92vw,560px); text-align:center}
+.toast.show{transform:translate(-50%,0)}
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease var(--d,0s), transform .7s ease var(--d,0s)}
+.reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important; transition:none!important}
+  .reveal{opacity:1; transform:none}
+}
+</style>
 </head>
 <body>
-  <main>
-    <p class="brand">yura-vote</p>
-    <h1>Скоро здесь будет проект</h1>
-    <p>Заглушка. Репозиторий подключён к GitHub Pages.</p>
-    <p><a href="https://codexdev.ru">codexdev.ru</a></p>
-  </main>
+<div class="noise" aria-hidden="true"></div>
+<div id="particles" aria-hidden="true"></div>
+
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">
+    <span>&nbsp;ВСЕ МЫ ЗНАЕМ — <b>ЮРА!!!</b> ★ ПРАВИЛЬНЫЙ ВЫБОР! ★ БУДУЩЕЕ В НАШИХ РУКАХ! ★ СЕТ БРОНИ КАЖДОМУ ★ ЖИЛЬЁ В ЦЕНТРЕ ★ ДОЛОЙ БОРЗИВИК ★ ПЕРВЫЙ ИВЕНТ — 15 АВГУСТА ★ ТВОЙ ГОЛОС — ТВОЁ БУДУЩЕЕ! ★&nbsp;</span>
+    <span>&nbsp;ВСЕ МЫ ЗНАЕМ — <b>ЮРА!!!</b> ★ ПРАВИЛЬНЫЙ ВЫБОР! ★ БУДУЩЕЕ В НАШИХ РУКАХ! ★ СЕТ БРОНИ КАЖДОМУ ★ ЖИЛЬЁ В ЦЕНТРЕ ★ ДОЛОЙ БОРЗИВИК ★ ПЕРВЫЙ ИВЕНТ — 15 АВГУСТА ★ ТВОЙ ГОЛОС — ТВОЁ БУДУЩЕЕ! ★&nbsp;</span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top"><span class="cube"></span>ЮРА<b>2026</b></a>
+    <span class="cmd-chip"><span data-ic="pick"></span>/vote yurist03</span>
+    <a class="mc-btn" href="#vote" style="padding:10px 16px; font-size:9px"><span data-ic="check"></span>Голосовать</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ВИЗИТКА -->
+<section class="card-sec">
+  <div class="wrap">
+    <div class="biz-card neon-frame reveal">
+      <div class="bc-left">
+        <div class="skin-box"><span id="skin" aria-label="Скин yurist03"></span></div>
+        <div class="pedestal"></div>
+        <div class="nameplate"><b>YURALAG</b><small>ник: yurist03<br>сервер: рубрика Чгеймград<br>должность: кандидат в мэры</small></div>
+      </div>
+      <div class="bc-right">
+        <div class="kicker">Визитная карточка кандидата • сезон 2026</div>
+        <h1 class="title ph"><span class="scr" data-text="ВСЕ МЫ ЗНАЕМ —">ВСЕ МЫ ЗНАЕМ —</span><span class="big scr" data-text="ЮРА!!!">ЮРА!!!</span></h1>
+        <div class="ribbon"><span>Правильный выбор! Будущее в наших руках!</span></div>
+        <p class="quote">Я вижу <em>беспорядок и неорганизованность</em> в нашем прекрасном городе — и знаю, как это исправить. За плечами — управление целым предприятием. Вместе мы превратим город в <em>прекрасное государство</em>!</p>
+        <ul class="za">
+          <li><span class="ic"><span data-ic="house"></span></span><div><b>Жильё в центре</b><small>личная площадь — каждому</small></div></li>
+          <li><span class="ic"><span data-ic="shield"></span></span><div><b>Броня каждому</b><small>максимально возможный сет</small></div></li>
+          <li><span class="ic"><span data-ic="wheat"></span></span><div><b>Победа над голодом</b><small>амбары и фермы для всех</small></div></li>
+          <li><span class="ic"><span data-ic="star"></span></span><div><b>Ивенты ежемесячно</b><small>праздник каждый месяц</small></div></li>
+        </ul>
+        <div class="hero-btns">
+          <a href="#vote" class="mc-btn"><span data-ic="pick"></span>Голосовать за Юру</a>
+          <a href="#plans" class="mc-btn purple"><span data-ic="scroll"></span>Мои планы</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПЛАНЫ -->
+<section class="plans" id="plans">
+  <div class="wrap">
+    <div class="kicker reveal">Программа</div>
+    <h2 class="h2 reveal">МОИ ПЛАНЫ ДЛЯ ГОРОДА</h2>
+    <p class="sub reveal">Пять железных обещаний. Каждое — под личную ответственность кандидата.</p>
+    <div class="plan-grid">
+      <div class="plan reveal"><span class="n">01</span><div class="ic"><span data-ic="cactus"></span></div><h3>Спилим Борзивика под корень</h3><p>Вместе с вами разберусь с сорняком — от него не останется ни блока.</p></div>
+      <div class="plan reveal" style="--d:.06s"><span class="n">02</span><div class="ic"><span data-ic="wheat"></span></div><h3>Победим голод</h3><p>Фермы, амбары и пайки — продовольственная безопасность сервера.</p></div>
+      <div class="plan reveal" style="--d:.12s"><span class="n">03</span><div class="ic"><span data-ic="star"></span></div><h3>Ивенты каждый месяц</h3><p>Квесты, арены и фестивали — по расписанию, с призами и фейерверками.</p></div>
+      <div class="plan reveal" style="--d:.18s"><span class="n">04</span><div class="ic"><span data-ic="shield"></span></div><h3>Сет брони каждому</h3><p>Максимально возможный сет — каждому жителю. Кузница уже готова.</p></div>
+      <div class="plan reveal" style="--d:.24s"><span class="n">05</span><div class="ic"><span data-ic="house"></span></div><h3>Жильё в центре</h3><p>Программа «Свой угол»: личный участок в центре — каждому игроку.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ОБО МНЕ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="kicker reveal">Обо мне</div>
+    <h2 class="h2 reveal">ОПЫТ, ПРОВЕРЕННЫЙ БЛОКАМИ</h2>
+    <p class="sub reveal">Не «когда-нибудь научусь», а уже управлял — и не раз.</p>
+    <div class="exp-list">
+      <div class="exp reveal"><span class="ic"><span data-ic="tree"></span></span><div><h3>УПРАВЛЯЮЩИЙ ЛЕСОПИЛКОЙ</h3><p>Снабжал деревом <b>все возможные рубрики выживания</b>: темпы, логистика, кадры.</p></div><span class="yrs">СТАРТ</span></div>
+      <div class="exp reveal" style="--d:.08s"><span class="ic"><span data-ic="factory"></span></span><div><h3>ДИРЕКТОР ЦЕНТРА ПРОМЫШЛЕННОСТИ</h3><p>Завод <b>ГПП ЦТРИП</b> — сердце промышленности рубрики Чгеймград.</p></div><span class="yrs">2022–2023</span></div>
+      <div class="exp reveal" style="--d:.16s"><span class="ic"><span data-ic="scroll"></span></span><div><h3>МИНИСТР ПРОМЫШЛЕННОСТИ</h3><p>Два года на высшем посту рубрики Чгеймград: стратегия, бюджеты, развитие.</p></div><span class="yrs">2023–2025</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ИВЕНТ -->
+<section class="event" id="event">
+  <div class="wrap">
+    <div class="kicker reveal">Афиша</div>
+    <h2 class="h2 reveal">ПЕРВЫЙ ИВЕНТ ПРИ ЮРЕ</h2>
+    <p class="sub reveal">Дворцовая площадь, рубрика Чгеймград. Мега-квест «Тайны Борзивика» и фестиваль еды. Приходи — получи печеньку агитатора.</p>
+    <p class="cd-label reveal" style="margin-top:26px"><span data-ic="star"></span><span id="cd-date">15 АВГУСТА • 18:00</span></p>
+    <div class="cd reveal">
+      <div class="cd-box"><b id="cd-d">00</b><span>ДНЕЙ</span></div>
+      <div class="cd-box"><b id="cd-h">00</b><span>ЧАСОВ</span></div>
+      <div class="cd-box"><b id="cd-m">00</b><span>МИНУТ</span></div>
+      <div class="cd-box"><b id="cd-s">00</b><span>СЕКУНД</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ГОЛОСОВАНИЕ -->
+<section class="vote" id="vote">
+  <div class="wrap">
+    <div class="kicker reveal">Голосование</div>
+    <h2 class="h2 reveal">РЕШИ, ГОРОД: КТО ПОВЕДЁТ?</h2>
+    <div class="poll reveal">
+      <div class="poll-row"><span class="y">ЮРА — <b id="yuraPct">0%</b> (<span id="yuraCnt">0</span>)</span><span class="b">(<span id="borzCnt">0</span>) <b id="borzPct">0%</b> — БОРЗИВИК</span></div>
+      <div class="poll-bar"><div class="poll-fill y" id="fillY"></div><div class="poll-fill b" id="fillB"></div></div>
+    </div>
+    <div class="vote-row reveal">
+      <button class="mc-btn" id="voteBtn" style="font-size:12px; padding:18px 30px"><span data-ic="crown"></span>Отдать голос за Юру</button>
+      <div>
+        <div class="total">Бюллетеней подано: <span id="totalCnt">0</span></div>
+        <div class="vote-note">АГИТАЦИОННЫЙ МАТЕРИАЛ • НА СЕРВЕРЕ: /vote yurist03</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="who"><span data-ic="heart"></span><div><b>ЮРА • yurist03 (Yuralag)</b><br>кандидат в мэры • рубрика Чгеймград</div></div>
+      <div class="who"><span data-ic="pick"></span><div>штаб: центральная площадь<br>команда: /vote yurist03</div></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ПРЕДВЫБОРНЫЙ ШТАБ yurist03 • ВИЗИТНАЯ КАРТОЧКА КАНДИДАТА</span>
+      <span>СДЕЛАНО ИЗ БЛОКОВ С ЛЮБОВЬЮ К ГОРОДУ</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ================= PIXEL SVG RENDERER ================= */
+  function px(rows, pal, w, h){
+    var out = "";
+    for(var y=0;y<rows.length;y++){
+      for(var x=0;x<rows[y].length;x++){
+        var c = rows[y].charAt(x);
+        if(c === "." ) continue;
+        var col = pal[c];
+        if(!col) continue;
+        out += '<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="'+col+'"/>';
+      }
+    }
+    var vw = rows[0].length, vh = rows.length;
+    var st = (w?'width:'+w+'px;':'')+(h?'height:'+h+'px;':'');
+    return '<svg class="pxic" style="'+st+'" viewBox="0 0 '+vw+' '+vh+'" shape-rendering="crispEdges" aria-hidden="true">'+out+'</svg>';
+  }
+
+  var ICONS = {
+    pick:{pal:{I:"#c9d1dc",T:"#8a5a2e"},rows:[".IIIIII.","I..TT..I","...TT...","...TT...","...TT...","...TT...","...TT...","...TT..."]},
+    check:{pal:{G:"#5ad04a"},rows:["......G.",".....GG.","G...GG..","GG.GG...",".GGG....","..G....."]},
+    house:{pal:{R:"#b0453a",W:"#e6d3ae",D:"#8a5a2e"},rows:["...RR...","..RRRR..",".RRRRRR.","RRRRRRRR",".WWDDWW.",".WWDDWW.",".WWWWWW."]},
+    shield:{pal:{I:"#c9d1dc",W:"#ffffff",Y:"#ffd21f"},rows:["IIIIIIII","IWWIIIII","IIIYYIII","IIIYYIII",".IIIIII.","..IIII..","...II..."]},
+    wheat:{pal:{Y:"#ffd21f",G:"#2e8a24"},rows:["...Y....","..YYY...",".YYYYY..","..YYY...",".YYYYY..","..YYY...","...G....","...G...."]},
+    star:{pal:{Y:"#ffd21f"},rows:["...Y....","...Y....","..YYY...","YYYYYYY.","..YYY...","...Y....","...Y...."]},
+    cactus:{pal:{C:"#5ad04a"},rows:[".C...C..",".C...C..",".CC.CC..","..CCC...","..CCC...","...C....","...C...."]},
+    tree:{pal:{G:"#2e8a24",T:"#8a5a2e"},rows:["...GG...","..GGGG..",".GGGGGG.","..GGGG..",".GGGGGG.","GGGGGGGG","...TT...","...TT..."]},
+    factory:{pal:{C:"#9aa0a8",W:"#ffd21f"},rows:["C..C....","C..C....","CCCCCCCC","CWCCWCC.","CCCCCCC.","CCCCCCC."]},
+    scroll:{pal:{W:"#f3ead2",K:"#6b7280"},rows:[".WWWWWW.",".W....W.",".WKKKKW.",".W....W.",".WKKK.W.",".W....W.",".WWWWWW."]},
+    crown:{pal:{Y:"#ffd21f"},rows:["Y..YY..Y","Y.YYYY.Y","YYYYYYYY","YYYYYYYY",".YYYYYY."]},
+    heart:{pal:{R:"#ff4d6d"},rows:[".RR.RR.","RRRRRRR","RRRRRRR",".RRRRR.","..RRR..","...R..."]}
+  };
+  document.querySelectorAll("[data-ic]").forEach(function(el){
+    var ic = ICONS[el.getAttribute("data-ic")];
+    if(ic) el.innerHTML = px(ic.rows, ic.pal);
+  });
+
+  /* ================= SKIN yurist03 ================= */
+  var SKIN = {
+    pal:{H:"#141218",S:"#f2c49b",E:"#274a35",W:"#ffffff",M:"#d99c74",B:"#191621",D:"#0e0c12",R:"#e02b2b",r:"#a81414",P:"#23262e",C:"#3a3f4a",X:"#f0f0f2"},
+    rows:[
+      "....HHHHHHHH....","....HHHHHHHH....","....HHHHHHHH....","....HHSSSSHH....",
+      "....SWESSEWS....","....SSSSSSSS....","....SSSMMSSS....","....SSSSSSSS....",
+      "BBBBDDDDDDDDBBBB","BBBBBBBBBBBBBBBB","BBBBBBBBRrBBBBBB","BBBBBBBBrRBBBBBB",
+      "BBBBBBBBBBBBBBBB","BBBBBBDDDDDBBBBB","BBBBBBDDDDDBBBBB","BBBBBBBBBBBBBBBB",
+      "BBBBBBBBBBBBBBBB","BBBBBBBBBBBBBBBB","SSSSBBBBBBBBSSSS","SSSSBBBBBBBBSSSS",
+      "....PPPPPPPP....","....PCPPPPCP....","....PPPPPCPP....","....PCPPPPPP....",
+      "....PPPPPCPP....","....PPCPPPPP....","....PPPPPPPP....","....PCPPPPCP....",
+      "....PPPPPPPP....","....PPPPPPPP....","....XXXXXXXX....","....XXXXXXXX...."
+    ]
+  };
+  document.getElementById("skin").innerHTML = px(SKIN.rows, SKIN.pal, 172, 344);
+
+  /* ================= particles ================= */
+  (function(){
+    if(reduced) return;
+    var holder = document.getElementById("particles");
+    var colors = ["#ffd21f","#c94dff","#ff3df0","#5fe8dd","#ffffff"];
+    for(var i=0;i<14;i++){
+      var p = document.createElement("i");
+      var s = 5 + Math.round(Math.random()*9);
+      p.style.left = (Math.random()*100)+"%";
+      p.style.width = s+"px"; p.style.height = s+"px";
+      p.style.background = colors[i%colors.length];
+      p.style.opacity = (0.10 + Math.random()*0.2).toFixed(2);
+      p.style.animationDuration = (16 + Math.random()*20)+"s";
+      p.style.animationDelay = (-Math.random()*24)+"s";
+      holder.appendChild(p);
+    }
+  })();
+
+  /* ================= scramble ================= */
+  var GLYPHS = "█▓▒░#@$%&ЮРА0123456789";
+  function scrambleEl(el){
+    var fin = el.getAttribute("data-text") || el.textContent;
+    if(reduced){ el.textContent = fin; return; }
+    var frame = 0, speed = 2;
+    var iv = setInterval(function(){
+      frame++;
+      var out = "";
+      for(var i=0;i<fin.length;i++){
+        var ch = fin.charAt(i);
+        if(ch === " "){ out += " "; continue; }
+        out += (frame > i*speed + 6) ? ch : GLYPHS.charAt(Math.floor(Math.random()*GLYPHS.length));
+      }
+      el.textContent = out;
+      if(frame > fin.length*speed + 6){ el.textContent = fin; clearInterval(iv); }
+    }, 30);
+  }
+  window.addEventListener("load", function(){
+    var scrs = document.querySelectorAll(".scr");
+    for(var i=0;i<scrs.length;i++) setTimeout(scrambleEl, i*350, scrs[i]);
+  });
+
+  /* ================= reveal ================= */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  },{threshold:.15});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+
+  /* ================= toast / fx ================= */
+  var toastEl = document.getElementById("toast"), toastT = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastT);
+    toastT = setTimeout(function(){ toastEl.classList.remove("show"); }, 3400);
+  }
+  function burst(x,y){
+    if(reduced) return;
+    var colors = ["#ffd21f","#c94dff","#ff3df0","#5fe8dd","#ffffff"];
+    for(var i=0;i<18;i++){
+      var b = document.createElement("span");
+      b.className = "bit";
+      b.style.left = x+"px"; b.style.top = y+"px";
+      b.style.background = colors[i%colors.length];
+      b.style.setProperty("--dx", (Math.random()*280-140)+"px");
+      b.style.setProperty("--dy", (Math.random()*-260-60)+"px");
+      document.body.appendChild(b);
+      setTimeout(function(el){ return function(){ el.remove(); }; }(b), 900);
+    }
+  }
+  function plus1(x,y){
+    if(reduced) return;
+    var p = document.createElement("span");
+    p.className = "plus1"; p.textContent = "+1";
+    p.style.left = (x-8)+"px"; p.style.top = (y-26)+"px";
+    document.body.appendChild(p);
+    setTimeout(function(){ p.remove(); }, 850);
+  }
+
+  /* ================= countdown: 15 августа, 18:00 ================= */
+  var cdD = document.getElementById("cd-d"), cdH = document.getElementById("cd-h"),
+      cdM = document.getElementById("cd-m"), cdS = document.getElementById("cd-s"),
+      cdDate = document.getElementById("cd-date");
+  function pad(n){ return (n<10?"0":"")+n; }
+  function target(){
+    var now = new Date();
+    var t = new Date(now.getFullYear(), 7, 15, 18, 0, 0);
+    if(now >= t) t = new Date(now.getFullYear()+1, 7, 15, 18, 0, 0);
+    return t;
+  }
+  var tgt = target();
+  cdDate.textContent = "15 АВГУСТА " + tgt.getFullYear() + " • 18:00";
+  function tickCd(){
+    var diff = tgt - new Date();
+    if(diff <= 0){ tgt = target(); diff = tgt - new Date(); cdDate.textContent = "15 АВГУСТА " + tgt.getFullYear() + " • 18:00"; }
+    cdD.textContent = pad(Math.floor(diff/86400000));
+    cdH.textContent = pad(Math.floor(diff/3600000)%24);
+    cdM.textContent = pad(Math.floor(diff/60000)%60);
+    cdS.textContent = pad(Math.floor(diff/1000)%60);
+  }
+  tickCd(); setInterval(tickCd, 1000);
+
+  /* ================= voting ================= */
+  var votes = { yura: 1337, borz: 402 };
+  try{
+    var saved = JSON.parse(localStorage.getItem("yura_poll_2026")||"null");
+    if(saved && typeof saved.yura === "number"){ votes.yura = saved.yura; votes.borz = saved.borz; }
+  }catch(e){}
+  var fillY = document.getElementById("fillY"), fillB = document.getElementById("fillB");
+  var yuraPct = document.getElementById("yuraPct"), borzPct = document.getElementById("borzPct");
+  var yuraCnt = document.getElementById("yuraCnt"), borzCnt = document.getElementById("borzCnt");
+  var totalCnt = document.getElementById("totalCnt");
+  function renderPoll(){
+    var total = votes.yura + votes.borz;
+    var py = Math.round(votes.yura/total*1000)/10;
+    fillY.style.width = py+"%";
+    fillB.style.width = (100-py)+"%";
+    yuraPct.textContent = py+"%";
+    borzPct.textContent = (Math.round((100-py)*10)/10)+"%";
+    yuraCnt.textContent = votes.yura;
+    borzCnt.textContent = votes.borz;
+    totalCnt.textContent = total;
+  }
+  renderPoll();
+  var firstVote = true;
+  document.getElementById("voteBtn").addEventListener("click", function(ev){
+    votes.yura++;
+    try{ localStorage.setItem("yura_poll_2026", JSON.stringify(votes)); }catch(e){}
+    renderPoll();
+    plus1(ev.clientX, ev.clientY);
+    burst(ev.clientX, ev.clientY);
+    if(firstVote){
+      toast("ДОСТИЖЕНИЕ ПОЛУЧЕНО: «СОЗНАТЕЛЬНЫЙ ГРАЖДАНИН» — ТЫ СДЕЛАЛ ПРАВИЛЬНЫЙ ВЫБОР!");
+      firstVote = false;
+    }
+  });
+})();
+</script>
 </body>
 </html>
