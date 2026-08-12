@@ -83,7 +83,7 @@ header.nav{position:sticky; top:0; z-index:50; background:rgba(22,10,42,.94); ba
 .bc-left{background:#0d0620; border-right:3px solid #000; padding:34px 22px 26px; text-align:center; position:relative}
 .bc-left::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 38%, rgba(201,77,255,.28), transparent 62%)}
 .skin-box{position:relative; display:inline-block; animation:bob 5s ease-in-out infinite}
-.skin-box .pxic{width:172px; height:344px; filter:drop-shadow(6px 8px 0 rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(201,77,255,.45))}
+.skin-box img{width:172px; height:auto; image-rendering:pixelated; image-rendering:crisp-edges; filter:drop-shadow(6px 8px 0 rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(201,77,255,.45))}
 @keyframes bob{50%{transform:translateY(-10px)}}
 .pedestal{width:150px; height:26px; margin:6px auto 0; background:linear-gradient(#c94dff 0 8px, #7a1fd0 8px 18px, #4b1180 18px); border:3px solid #000; box-shadow:0 6px 0 rgba(0,0,0,.5), 0 0 18px rgba(201,77,255,.5)}
 .nameplate{position:relative; font-family:var(--px); margin-top:20px; background:#160a2a; border:3px solid #000; box-shadow:0 0 0 3px rgba(201,77,255,.5); padding:14px 10px}
@@ -202,7 +202,7 @@ footer{background:#0b0518; border-top:3px solid #000; box-shadow:0 -3px 0 rgba(2
   <div class="wrap">
     <div class="biz-card neon-frame reveal">
       <div class="bc-left">
-        <div class="skin-box"><span id="skin" aria-label="Скин yurist03"></span></div>
+        <div class="skin-box"><img src="1000.png" width="300" height="600" alt="Скин yurist03"></div>
         <div class="pedestal"></div>
         <div class="nameplate"><b>YURALAG</b><small>ник: yurist03<br>сервер: рубрика Чгеймград<br>должность: кандидат в мэры</small></div>
       </div>
@@ -348,22 +348,6 @@ footer{background:#0b0518; border-top:3px solid #000; box-shadow:0 -3px 0 rgba(2
     var ic = ICONS[el.getAttribute("data-ic")];
     if(ic) el.innerHTML = px(ic.rows, ic.pal);
   });
-
-  /* ================= SKIN yurist03 ================= */
-  var SKIN = {
-    pal:{H:"#141218",S:"#f2c49b",E:"#274a35",W:"#ffffff",M:"#d99c74",B:"#191621",D:"#0e0c12",R:"#e02b2b",r:"#a81414",P:"#23262e",C:"#3a3f4a",X:"#f0f0f2"},
-    rows:[
-      "....HHHHHHHH....","....HHHHHHHH....","....HHHHHHHH....","....HHSSSSHH....",
-      "....SWESSEWS....","....SSSSSSSS....","....SSSMMSSS....","....SSSSSSSS....",
-      "BBBBDDDDDDDDBBBB","BBBBBBBBBBBBBBBB","BBBBBBBBRrBBBBBB","BBBBBBBBrRBBBBBB",
-      "BBBBBBBBBBBBBBBB","BBBBBBDDDDDBBBBB","BBBBBBDDDDDBBBBB","BBBBBBBBBBBBBBBB",
-      "BBBBBBBBBBBBBBBB","BBBBBBBBBBBBBBBB","SSSSBBBBBBBBSSSS","SSSSBBBBBBBBSSSS",
-      "....PPPPPPPP....","....PCPPPPCP....","....PPPPPCPP....","....PCPPPPPP....",
-      "....PPPPPCPP....","....PPCPPPPP....","....PPPPPPPP....","....PCPPPPCP....",
-      "....PPPPPPPP....","....PPPPPPPP....","....XXXXXXXX....","....XXXXXXXX...."
-    ]
-  };
-  document.getElementById("skin").innerHTML = px(SKIN.rows, SKIN.pal, 172, 344);
 
   /* ================= particles ================= */
   (function(){
